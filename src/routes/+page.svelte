@@ -21,7 +21,7 @@
 
 <Header />
 <main>
-  <section class="hero--section">
+  <section id="hero" class="hero--section">
     <div class="text--container">
       <div>
         <p class="hero--desc p--bigger">I'm <strong>Jarle</strong> a</p>
@@ -54,34 +54,37 @@
     <CardList>
       <Card
         siteUrl="https://reliable-kashata-528c36.netlify.app/index.html?fbclid=IwAR2EjC3LsaS-0tNUGU0ePLmCrcArbGafMxSesHHc4kOWasJTj5wCvihM0YE/"
+       githubUrl="https://github.com/Noroff-FEU-Assignments/project-exam-1-Jarle302"
         projectType="Blog"
         projectDesc="This is my year one exam project on Noroff. The brief said to make a blog using wordpress as a headless cms."
         title="The Synthethic Scribe"
-        imgURL="src/assets/aboutAi.jpg"
+        imgURL="aboutAi.jpg"
       />
       <Card
         siteUrl="https://lively-sawine-3262d2.netlify.app/"
+        githubUrl="https://github.com/Jarle302/CA-html-CSS"
         projectType="Ecommerce"
         projectDesc="This was my crosscourse assignment, the brief said to make a ecommerce site selling jackets for a fictional brand called RainyDays"
         title="Rainydays"
-        imgURL="src/assets/rainyDaysss.jpg"
+        imgURL="rainyDaysss.jpg"
       />
       <Card
         siteUrl="https://sweet-gumption-216664.netlify.app/index.html?fbclid=IwAR1uBTurQsIklQe4oCAFu5WtCqP1l4Ugj0rkib2UK-vXZXeppgIAy6gTeU0"
+        githubUrl="https://github.com/Jarle302/Noroff-sp1-Jarle"
         projectType="Text heavy"
-        projectDesc="This was my crosscourse assignment, the brief said to make a ecommerce site selling jackets for a fictional brand called RainyDays"
+        projectDesc="This was my semester project, that task was to make a website for a childrens science museum"
         title="CSM"
-        imgURL="src/assets/CSM.jpg"
-      />
+        imgURL="CSM.jpg"
+        />
     </CardList>
   </section>
-  <section class="contact--section">
+  <section id="contact" class="contact--section">
     <h2 class="h2--contact">Contact me</h2>
     <ContactInfo />
     <Form />
     <div />
   </section>
-  <section class="about--section">
+  <section id="about" class="about--section">
     <h2 class="about--h2">About</h2>
     <div>
       <p class="about--p">
@@ -96,7 +99,7 @@
         tasks rather than add more complexity.
       </p>
     </div>
-    <img src="src/assets/portrait.jpg" alt="" />
+    <img src="portrait.jpg" alt="" />
   </section>
 </main>
 <footer />

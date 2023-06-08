@@ -2,17 +2,22 @@
 
 <header>
   <nav>
-    <a class="logo--link" href="">Jarle.dev</a>
+    <a class="logo--link" href="#hero">Jarle.dev</a>
     <ul>
-      <li><a href="">Home</a></li>
-      <li><a href="">Projects</a></li>
-      <li><a href="">Contact</a></li>
-      <li><a href="">About</a></li>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
     </ul>
   </nav>
 </header>
 
 <style>
+
+*{
+  font-family: "Source Code Pro", monospace;
+}
+
   nav {
     display: flex;
     align-items: center;
@@ -41,6 +46,7 @@
 
   a {
     text-decoration: none;
+    color:#273549;
   }
   header {
     background-color: #e5d75c;
