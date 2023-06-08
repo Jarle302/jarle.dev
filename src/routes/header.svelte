@@ -2,7 +2,7 @@
 
 <header>
   <nav>
-    <a class="" href="">Jarle.dev</a>
+    <a class="logo--link" href="">Jarle.dev</a>
     <ul>
       <li><a href="">Home</a></li>
       <li><a href="">Projects</a></li>
@@ -18,6 +18,15 @@
     align-items: center;
     justify-content: space-between;
     padding: 1px;
+  }
+
+  .logo--link {
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    box-sizing: border-box;
+    margin-left: 7px;
+    color: #242a3f;
+    font-size: 1.2rem;
   }
 
   ul {

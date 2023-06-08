@@ -24,15 +24,12 @@
   <section class="hero--section">
     <div class="text--container">
       <div>
-        <p class="big--text center">HELLO!</p>
-        <p class="small--text center">I'm</p>
-        <p class="hero--name center">Jarle</p>
-
-        <p class="small--text center">A</p>
+        <p class="hero--desc p--bigger">I'm <strong>Jarle</strong> a</p>
         <h1>Frontend developer</h1>
+        <h2 class="hero--h2">Simplifying complexity</h2>
         <p class="hero--desc">
-          I thrive on expanding my skill set, staying up-to-date and exploring
-          new technologies that push the boundaries of what's possible.
+          I thrive on crafting intuitive user experiences, making the complex as
+          simple as i can for my users
         </p>
       </div>
       <Button message="Projects" />
@@ -85,9 +82,19 @@
     <div />
   </section>
   <section class="about--section">
+    <h2 class="about--h2">About</h2>
     <div>
-      <h1>About</h1>
-      <p />
+      <p class="about--p">
+        I'm a former teacher turned frontend developer. It all started when i
+        needed to learn to code to teach it to my pupils, i got instantly
+        hooked, and decided there and then that eventhough i love teaching this
+        is what i want to do with my life. I love learning new things, problem
+        solve, and the feeling of finnaly solving a problem, both for myself and
+        for other people. The more i learn the more i realize that code is a
+        tool to help people, all people. So my focus is shifting more and more
+        towards making code that first and foremost helps my users with their
+        tasks rather than add more complexity.
+      </p>
     </div>
     <img src="src/assets/portrait.jpg" alt="" />
   </section>
@@ -99,10 +106,8 @@
     display: flex;
   }
 
-  .big--text {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #e2e55c;
+  .p--bigger {
+    font-size: 1.2rem;
   }
 
   .text--container {
@@ -115,6 +120,10 @@
     align-items: center;
     height: 100vh;
     justify-content: space-evenly;
+  }
+
+  #projects {
+    text-align: center;
   }
 
   .hero--desc {
@@ -134,17 +143,23 @@
     justify-content: space-evenly;
     background-color: #273549;
     color: white;
+    padding-bottom: 60px;
   }
-  .center {
+  .center,
+  .h2--contact {
     text-align: center;
   }
 
   .about--section {
     background-color: #24323f;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  }
+
+  .about--h2 {
+    text-align: center;
+    margin: 20px 0;
   }
 
   .svg--arrow {
@@ -179,15 +194,24 @@
     font-size: 2.2rem;
   }
 
-  h1,
-  h2 {
-    color: #e2e55c;
-    font-size: 4rem;
+  h1 {
+    font-size: 5rem;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     flex-basis: 100%;
-    text-align: center;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: "Oswald", sans-serif;
+    color: #e2e55c;
+    text-transform: uppercase;
+  }
+
+  .about--p {
+    color: #9cccf9;
+    max-width: 700px;
   }
 
   .h2--contact {

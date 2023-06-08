@@ -51,6 +51,7 @@
     flex-direction: column;
     width: 256px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: rgb(36 42 63);
   }
 
   .type {
