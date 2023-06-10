@@ -22,16 +22,16 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const header_svelte_svelte_type_style_lang = "";
 const css$5 = {
-  code: 'nav.svelte-ftjclu{display:flex;align-items:center;justify-content:space-between;padding:1px}.logo--link.svelte-ftjclu{text-transform:uppercase;font-family:"Oswald", sans-serif;box-sizing:border-box;margin-left:7px;color:#242a3f;font-size:1.2rem}ul.svelte-ftjclu{display:flex;list-style:none;gap:20px;justify-content:flex-end;padding:20px;align-items:center;margin:0}a.svelte-ftjclu{text-decoration:none}header.svelte-ftjclu{background-color:#e5d75c}',
+  code: '.svelte-1p94qzg{font-family:"Source Code Pro", monospace}nav.svelte-1p94qzg{display:flex;align-items:center;justify-content:space-between;padding:1px}.logo--link.svelte-1p94qzg{text-transform:uppercase;font-family:"Oswald", sans-serif;box-sizing:border-box;margin-left:7px;color:#242a3f;font-size:1.2rem}ul.svelte-1p94qzg{display:flex;list-style:none;gap:20px;justify-content:flex-end;padding:20px;align-items:center;margin:0}a.svelte-1p94qzg{text-decoration:none;color:#273549}header.svelte-1p94qzg{background-color:#e5d75c}',
   map: null
 };
 const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$5);
-  return `<header class="svelte-ftjclu"><nav class="svelte-ftjclu"><a class="logo--link svelte-ftjclu" href="">Jarle.dev</a>
-    <ul class="svelte-ftjclu"><li><a href="" class="svelte-ftjclu">Home</a></li>
-      <li><a href="" class="svelte-ftjclu">Projects</a></li>
-      <li><a href="" class="svelte-ftjclu">Contact</a></li>
-      <li><a href="" class="svelte-ftjclu">About</a></li></ul></nav>
+  return `<header class="svelte-1p94qzg"><nav class="svelte-1p94qzg"><a class="logo--link svelte-1p94qzg" href="#hero">Jarle.dev</a>
+    <ul class="svelte-1p94qzg"><li class="svelte-1p94qzg"><a href="#hero" class="svelte-1p94qzg">Home</a></li>
+      <li class="svelte-1p94qzg"><a href="#projects" class="svelte-1p94qzg">Projects</a></li>
+      <li class="svelte-1p94qzg"><a href="#contact" class="svelte-1p94qzg">Contact</a></li>
+      <li class="svelte-1p94qzg"><a href="#about" class="svelte-1p94qzg">About</a></li></ul></nav>
 </header>`;
 });
 const card_svelte_svelte_type_style_lang = "";
@@ -134,7 +134,7 @@ const css = {
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
-<main class="svelte-1e9bsw4"><section class="hero--section svelte-1e9bsw4"><div class="text--container svelte-1e9bsw4"><div class="svelte-1e9bsw4"><p class="hero--desc p--bigger svelte-1e9bsw4">I&#39;m <strong class="svelte-1e9bsw4">Jarle</strong> a</p>
+<main class="svelte-1e9bsw4"><section id="hero" class="hero--section svelte-1e9bsw4"><div class="text--container svelte-1e9bsw4"><div class="svelte-1e9bsw4"><p class="hero--desc p--bigger svelte-1e9bsw4">I&#39;m <strong class="svelte-1e9bsw4">Jarle</strong> a</p>
         <h1 class="svelte-1e9bsw4">Frontend developer</h1>
         <h2 class="hero--h2 svelte-1e9bsw4">Simplifying complexity</h2>
         <p class="hero--desc svelte-1e9bsw4">I thrive on crafting intuitive user experiences, making the complex as
@@ -149,10 +149,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         $$result,
         {
           siteUrl: "https://reliable-kashata-528c36.netlify.app/index.html?fbclid=IwAR2EjC3LsaS-0tNUGU0ePLmCrcArbGafMxSesHHc4kOWasJTj5wCvihM0YE/",
+          githubUrl: "https://github.com/Noroff-FEU-Assignments/project-exam-1-Jarle302",
           projectType: "Blog",
           projectDesc: "This is my year one exam project on Noroff. The brief said to make a blog using wordpress as a headless cms.",
           title: "The Synthethic Scribe",
-          imgURL: "src/assets/aboutAi.jpg"
+          imgURL: "aboutAi.jpg"
         },
         {},
         {}
@@ -161,10 +162,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         $$result,
         {
           siteUrl: "https://lively-sawine-3262d2.netlify.app/",
+          githubUrl: "https://github.com/Jarle302/CA-html-CSS",
           projectType: "Ecommerce",
           projectDesc: "This was my crosscourse assignment, the brief said to make a ecommerce site selling jackets for a fictional brand called RainyDays",
           title: "Rainydays",
-          imgURL: "src/assets/rainyDaysss.jpg"
+          imgURL: "rainyDaysss.jpg"
         },
         {},
         {}
@@ -173,8 +175,9 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         $$result,
         {
           siteUrl: "https://sweet-gumption-216664.netlify.app/index.html?fbclid=IwAR1uBTurQsIklQe4oCAFu5WtCqP1l4Ugj0rkib2UK-vXZXeppgIAy6gTeU0",
+          githubUrl: "https://github.com/Jarle302/Noroff-sp1-Jarle",
           projectType: "Text heavy",
-          projectDesc: "This was my crosscourse assignment, the brief said to make a ecommerce site selling jackets for a fictional brand called RainyDays",
+          projectDesc: "This was my semester project, that task was to make a website for a childrens science museum",
           title: "CSM",
           imgURL: "CSM.jpg"
         },
@@ -183,11 +186,11 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       )}`;
     }
   })}</section>
-  <section class="contact--section svelte-1e9bsw4"><h2 class="h2--contact svelte-1e9bsw4">Contact me</h2>
+  <section id="contact" class="contact--section svelte-1e9bsw4"><h2 class="h2--contact svelte-1e9bsw4">Contact me</h2>
     ${validate_component(Contactinfo, "ContactInfo").$$render($$result, {}, {}, {})}
     ${validate_component(Form, "Form").$$render($$result, {}, {}, {})}
     <div class="svelte-1e9bsw4"></div></section>
-  <section class="about--section svelte-1e9bsw4"><h2 class="about--h2 svelte-1e9bsw4">About</h2>
+  <section id="about" class="about--section svelte-1e9bsw4"><h2 class="about--h2 svelte-1e9bsw4">About</h2>
     <div class="svelte-1e9bsw4"><p class="about--p svelte-1e9bsw4">I&#39;m a former teacher turned frontend developer. It all started when i
         needed to learn to code to teach it to my pupils, i got instantly
         hooked, and decided there and then that eventhough i love teaching this
@@ -198,7 +201,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         towards making code that first and foremost helps my users with their
         tasks rather than add more complexity.
       </p></div>
-    <img src="src/assets/portrait.jpg" alt="" class="svelte-1e9bsw4"></section></main>
+    <img src="portrait.jpg" alt="" class="svelte-1e9bsw4"></section></main>
 <footer class="svelte-1e9bsw4"></footer>`;
 });
 export {
