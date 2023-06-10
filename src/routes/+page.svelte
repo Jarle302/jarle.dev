@@ -1,7 +1,7 @@
 <script>
   import Button from "./button.svelte";
   import Header from "./header.svelte";
-  import Card from "Card.svelte";
+  import Card from "./Card.svelte";
   import CardList from "./cardList.svelte";
   import ContactInfo from "./contactinfo.svelte";
   import Form from "./form.svelte";
