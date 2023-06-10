@@ -219,8 +219,7 @@
     padding: 0;
     font-family: "Source Code Pro", monospace;
   }
-
-  body {
+  :global(body) {
     margin: 0;
   }
 
