@@ -11,7 +11,10 @@
       <li><a href="#contact">Contact</a></li>
       <li><a href="#about">About</a></li>
     </ul>
-    <button on:click type="button" class="hamburger--open"><i class="fa-solid fa-bars"></i></button>
+    <button on:click type="button" class="hamburger--open"><svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.329681 2.05885V0.588257H13.627V2.05885H0.329681ZM0.329681 5.73532H13.627V4.26473H0.329681V5.73532ZM0.329681 9.41179H13.627V7.9412H0.329681V9.41179Z" fill="#1C1B1F"/>
+</svg>
+</button>
   </nav>
 </header>
 
@@ -26,6 +29,14 @@ header{
   position:fixed;
   width:100%;
 
+}
+
+button{border:none;
+background:none;
+margin-right:10px;
+position:absolute;
+right:0;
+z-index:3;
 }
 
   nav {
@@ -74,6 +85,7 @@ header{
   }
   header {
     background-color: #e5d75c;
+    
   }
 
 
@@ -83,17 +95,23 @@ ul{
   display:none
 }
 
+header{
+  height:42px;
+    display:grid;
+    padding:5px;
+}
+
 .show{
-    display: flex;
+  display: flex;
     position: absolute;
     flex-direction: column;
-    left: 24%;
     top: 6%;
     background: #9cccf9;
     height: 50vh;
     align-items: center;
     justify-content: center;
-    padding: 74px;
+    z-index: 0;
+    width: 88vw;
 
   }
 
