@@ -24,7 +24,7 @@
     <div class="text--container">
       <div>
         <p class="hero--desc p--bigger">I'm <strong>Jarle</strong> a</p>
-        <h1>Frontend developer</h1>
+        <h1>backend developer</h1>
         <h2 class="hero--h2">Simplifying complexity</h2>
         <p class="hero--desc">
           I thrive on crafting intuitive user experiences, making the complex as
