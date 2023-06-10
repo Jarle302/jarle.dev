@@ -1,18 +1,21 @@
-<script></script>
+<script>
+</script>
 
 <header>
   <nav>
     <a class="logo--link" href="#hero">Jarle.dev</a>
-    <ul>
+    <ul >
       <li><a href="#hero">Home</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#about">About</a></li>
     </ul>
+    <button on:click type="button" class="hamburger--open"><i class="fa-solid fa-bars"></i></button>
   </nav>
 </header>
 
 <style>
+  .hamburger--open{display:none;}
 
 *{
   font-family: "Source Code Pro", monospace;
@@ -50,5 +53,13 @@
   }
   header {
     background-color: #e5d75c;
+  }
+
+
+  @media (max-width: 400px){
+    .hamburger--open{display:block;}
+ul{
+  display:none
+}
   }
 </style>

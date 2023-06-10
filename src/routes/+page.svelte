@@ -1,24 +1,19 @@
 <script>
+    import { onMount } from 'svelte';
   import Button from "./button.svelte";
   import Header from "./header.svelte";
   import CardList from "./cardList.svelte";
   import ContactInfo from "./contactinfo.svelte";
   import Form from "./form.svelte";
   import Card from "./test.svelte"
-  function styleChange(project) {
-    const headerText = document.querySelectorAll("h1,h2");
-    const main = document.querySelector("main");
-    if (project === "rainyDays") {
-      headerText.forEach((header) => {
-        header.style.color = "white";
-        header.style.fontFamily = "'Noto Serif'";
-        header.style.backgroundColor = " rgb(0 0 0 / 19%)";
-      });
-    }
-  }
+  
+
+  
+  
+
 </script>
 
-<Header />
+<Header/>
 <main>
   <section id="hero" class="hero--section">
     <div class="text--container">
@@ -81,7 +76,6 @@
     <h2 class="h2--contact">Contact me</h2>
     <ContactInfo />
     <Form />
-    <div />
   </section>
   <section id="about" class="about--section">
     <h2 class="about--h2">About</h2>
@@ -232,4 +226,15 @@
   body {
     margin: 0;
   }
+
+@media screen and (max-width:600px){
+  h1{font-size:2rem;
+  }h2{font-size:1.3rem}
+
+  .hero--name{
+    font-size:1rem;
+  }
+
+}
+
 </style>
