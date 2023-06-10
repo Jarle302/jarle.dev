@@ -6,14 +6,11 @@
   import ContactInfo from "./contactinfo.svelte";
   import Form from "./form.svelte";
   import Card from "./test.svelte"
-  
-
-  
-  
+  let isShowing = true
 
 </script>
 
-<Header/>
+<Header isShowing={isShowing} on:click={(()=> {isShowing = !isShowing;console.log(isShowing)})} />
 <main>
   <section id="hero" class="hero--section">
     <div class="text--container">

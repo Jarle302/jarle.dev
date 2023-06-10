@@ -1,10 +1,11 @@
 <script>
+  export let isShowing = true
 </script>
 
 <header>
   <nav>
     <a class="logo--link" href="#hero">Jarle.dev</a>
-    <ul >
+    <ul class={!isShowing?"show":"hide"} >
       <li><a href="#hero">Home</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -37,8 +38,17 @@
     font-size: 1.2rem;
   }
 
-  ul {
+  .show{
     display: flex;
+   
+  }
+
+  .hide{
+    display:none;
+  }
+
+  ul {
+    display:flex;
     list-style: none;
     gap: 20px;
     justify-content: flex-end;
@@ -61,5 +71,20 @@
 ul{
   display:none
 }
+
+.show{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: 24%;
+    top: 6%;
+    background: #9cccf9;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    padding: 74px;
+
+  }
+
   }
 </style>
