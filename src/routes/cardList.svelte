@@ -1,5 +1,4 @@
 <script>
-  import Card from "test.svelte";
 </script>
 
 <div>
