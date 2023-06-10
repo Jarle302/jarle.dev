@@ -1,11 +1,10 @@
 <script>
   import Button from "./button.svelte";
   import Header from "./header.svelte";
-  import Card from "./Card.svelte";
   import CardList from "./cardList.svelte";
   import ContactInfo from "./contactinfo.svelte";
   import Form from "./form.svelte";
-
+  import Card from "./Card.svelte";
   function styleChange(project) {
     const headerText = document.querySelectorAll("h1,h2");
     const main = document.querySelector("main");
