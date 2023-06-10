@@ -23,7 +23,7 @@
           simple as i can for my users
         </p>
       </div>
-      <Button message="Projects" />
+      <Button link="#projects" message="Projects" />
     </div>
   </section>
   <section class="projects--section">
@@ -223,7 +223,11 @@
     margin: 0;
   }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:700px){
+section{
+  padding:0 20px;
+}
+
   h1{font-size:2rem;
   }h2{font-size:1.3rem}
 
