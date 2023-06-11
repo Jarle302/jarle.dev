@@ -8,7 +8,7 @@
   }
 </script>
 
-<form action="">
+<form>
   <label for="your-email">your-email</label>
   <input
     bind:value={form.email}
