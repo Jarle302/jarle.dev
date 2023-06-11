@@ -1,15 +1,20 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
   export let isShowing = true;
+  function close() {
+    dispatch("closed", isShowing);
+  }
 </script>
 
 <header>
   <nav>
-    <a class="logo--link" href="#hero">Jarle.dev</a>
+    <a on:click={close} class="logo--link" href="#hero">Jarle.dev</a>
     <ul class={!isShowing ? "show" : "hide"}>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a on:click={close} href="#hero">Home</a></li>
+      <li><a on:click={close} href="#projects">Projects</a></li>
+      <li><a on:click={close} href="#contact">Contact</a></li>
+      <li><a on:click={close} href="#about">About</a></li>
     </ul>
     <button on:click type="button" class="hamburger--open"
       ><svg

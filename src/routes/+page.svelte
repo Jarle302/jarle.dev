@@ -1,12 +1,10 @@
 <script>
-  import { onMount } from "svelte";
   import Button from "./button.svelte";
   import Header from "./header.svelte";
   import CardList from "./cardList.svelte";
   import ContactInfo from "./contactinfo.svelte";
   import Form from "./form.svelte";
   import Card from "./test.svelte";
-  import { loop_guard } from "svelte/internal";
   let isShowing = false;
 
   function resize() {
@@ -23,6 +21,7 @@
   on:click={() => {
     isShowing = !isShowing;
   }}
+  on:closed={(e) => (isShowing = !e.detail)}
 />
 <main>
   <section id="hero" class="hero--section">
