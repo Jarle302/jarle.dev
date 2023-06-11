@@ -1,16 +1,29 @@
 <script>
-    import { onMount } from 'svelte';
+  import { onMount } from "svelte";
   import Button from "./button.svelte";
   import Header from "./header.svelte";
   import CardList from "./cardList.svelte";
   import ContactInfo from "./contactinfo.svelte";
   import Form from "./form.svelte";
-  import Card from "./test.svelte"
-  let isShowing = false
+  import Card from "./test.svelte";
+  let isShowing = true;
 
+  function resize() {
+    let width = window.innerWidth;
+    if (width > 400) {
+      isShowing = true;
+    }
+  }
 </script>
 
-<Header isShowing={isShowing} on:click={(()=> {isShowing = !isShowing;console.log(isShowing)})} />
+<svelte:window on:resize={resize} />
+<Header
+  {isShowing}
+  on:click={() => {
+    isShowing = !isShowing;
+    console.log(isShowing);
+  }}
+/>
 <main>
   <section id="hero" class="hero--section">
     <div class="text--container">
@@ -45,7 +58,7 @@
     <CardList>
       <Card
         siteUrl="https://reliable-kashata-528c36.netlify.app/index.html?fbclid=IwAR2EjC3LsaS-0tNUGU0ePLmCrcArbGafMxSesHHc4kOWasJTj5wCvihM0YE/"
-       githubUrl="https://github.com/Noroff-FEU-Assignments/project-exam-1-Jarle302"
+        githubUrl="https://github.com/Noroff-FEU-Assignments/project-exam-1-Jarle302"
         projectType="Blog"
         projectDesc="This is my year one exam project on Noroff. The brief said to make a blog using wordpress as a headless cms."
         title="The Synthethic Scribe"
@@ -66,7 +79,7 @@
         projectDesc="This was my semester project, that task was to make a website for a childrens science museum"
         title="CSM"
         imgURL="CSM.jpg"
-        />
+      />
     </CardList>
   </section>
   <section id="contact" class="contact--section">
@@ -223,18 +236,20 @@
     margin: 0;
   }
 
-@media screen and (max-width:700px){
-section{
-  padding:0 20px;
-}
+  @media screen and (max-width: 700px) {
+    section {
+      padding: 0 20px;
+    }
 
-  h1{font-size:2rem;
-  }h2{font-size:1.3rem}
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+    }
 
-  .hero--name{
-    font-size:1rem;
+    .hero--name {
+      font-size: 1rem;
+    }
   }
-
-}
-
 </style>
