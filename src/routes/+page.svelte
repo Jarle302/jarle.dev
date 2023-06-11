@@ -6,7 +6,6 @@
   import Form from "./form.svelte";
   import Card from "./test.svelte";
   let isShowing = false;
-
   function resize() {
     let width = window.innerWidth;
     if (width <= 400) {
@@ -21,7 +20,12 @@
   on:click={() => {
     isShowing = !isShowing;
   }}
-  on:closed={(e) => (isShowing = !e.detail)}
+  on:closed={(e) => {
+    let width = window.innerWidth;
+    if (width <= 400) {
+      isShowing = !e.detail;
+    }
+  }}
 />
 <main>
   <section id="hero" class="hero--section">
