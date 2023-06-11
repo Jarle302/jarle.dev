@@ -3,18 +3,21 @@
 
 <div>
   <p class="number"><i class="fa-solid fa-square-phone" />450 46 326</p>
-  <p class="email">
+  <a href="mailto:jarlehtollaksen2@live.no" class="email">
     <i class="fa-solid fa-square-envelope" />jarlehtollaksen2@live.no
-  </p>
+  </a>
 </div>
 
 <style>
   i {
     margin: 0 10px;
   }
-  p {
+  p,
+  a {
     font-size: 1.7rem;
+    color: white;
   }
+  
 
   @media screen and (max-width: 500px) {
     p {
