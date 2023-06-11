@@ -23,7 +23,8 @@
   }
 
   @media screen and (max-width: 500px) {
-    p {
+    p,
+    a {
       font-size: 1rem;
     }
   }
