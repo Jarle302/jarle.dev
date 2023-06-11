@@ -6,11 +6,11 @@
   import ContactInfo from "./contactinfo.svelte";
   import Form from "./form.svelte";
   import Card from "./test.svelte";
-  let isShowing = true;
+  let isShowing = false;
 
   function resize() {
     let width = window.innerWidth;
-    if (width > 400) {
+    if (width <= 400) {
       isShowing = true;
     }
   }
