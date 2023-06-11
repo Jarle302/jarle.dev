@@ -43,20 +43,6 @@
     </div>
   </section>
   <section class="projects--section">
-    <svg
-      class="svg--arrow"
-      width="274"
-      height="259"
-      viewBox="0 0 274 259"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M123.919 253.081C131.143 260.306 142.857 260.306 150.081 253.081L267.815 135.348C275.039 128.124 275.039 116.41 267.815 109.185C260.59 101.961 248.877 101.961 241.652 109.185L137 213.837L32.3482 109.185C25.1235 101.961 13.4099 101.961 6.18524 109.185C-1.03946 116.41 -1.03946 128.124 6.18524 135.348L123.919 253.081ZM118.5 0L118.5 240H155.5V0L118.5 0Z"
-        fill="#E2E55C"
-        fill-opacity="0.12"
-      />
-    </svg>
     <h2 id="projects">Projects</h2>
     <CardList>
       <Card
@@ -94,15 +80,34 @@
     <h2 class="about--h2">About</h2>
     <div>
       <p class="about--p">
-        I'm a former teacher turned frontend developer. It all started when i
-        needed to learn to code to teach it to my pupils, i got instantly
-        hooked, and decided there and then that eventhough i love teaching this
-        is what i want to do with my life. I love learning new things, problem
-        solve, and the feeling of finnaly solving a problem, both for myself and
-        for other people. The more i learn the more i realize that code is a
-        tool to help people, all people. So my focus is shifting more and more
-        towards making code that first and foremost helps my users with their
-        tasks rather than add more complexity.
+        "I'm a former teacher who transitioned into a <strong
+          >front-end developer</strong
+        >
+        role. My journey into coding began when I needed to learn it in order to
+        teach it to my students. Instantly, I became captivated by coding and realized
+        that it was my true passion. While I loved teaching, I knew that coding was
+        what I wanted to pursue as a career.
+      </p>
+      <p class="about--p">
+        What I enjoy most about coding is the
+        <em>continuous learning process</em>,
+        <em>problem-solving</em>, and the satisfaction of finding solutions.
+        It's incredibly rewarding to overcome challenges, not only for myself
+        but also for others.
+      </p>
+      <p class="about--p">
+        I've come to understand that code is a
+        <strong>powerful tool</strong>
+        that can positively impact people's lives. As a result, my focus has shifted
+        towards creating code that prioritizes helping users with their tasks, rather
+        than adding unnecessary complexity.
+      </p>
+      <p class="about--p">
+        I embrace the opportunity to learn new things and apply my skills to
+        develop solutions that make a difference for others. Coding has become
+        my way of making a
+        <strong>meaningful impact</strong> in the world, and I'm thrilled to continue
+        this journey of growth and contribution."
       </p>
     </div>
     <img src="portrait.jpg" alt="" />
@@ -221,6 +226,8 @@
   .about--p {
     color: #9cccf9;
     max-width: 700px;
+    line-height: 1.5;
+    margin: 10px;
   }
 
   .h2--contact {
