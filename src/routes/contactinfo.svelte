@@ -27,5 +27,9 @@
     a {
       font-size: 1rem;
     }
+
+    a {
+      margin-bottom: 10px;
+    }
   }
 </style>
