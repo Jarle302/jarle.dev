@@ -17,7 +17,10 @@
     font-size: 1.7rem;
     color: white;
   }
-  
+
+  a:hover {
+    background-color: #e5d75c;
+  }
 
   @media screen and (max-width: 500px) {
     p {
