@@ -6,12 +6,13 @@
   import ContactInfo from "./contactinfo.svelte";
   import Form from "./form.svelte";
   import Card from "./test.svelte";
+  import { loop_guard } from "svelte/internal";
   let isShowing = false;
 
   function resize() {
     let width = window.innerWidth;
     if (width <= 400) {
-      isShowing = true;
+      isShowing = false;
     }
   }
 </script>
@@ -21,7 +22,6 @@
   {isShowing}
   on:click={() => {
     isShowing = !isShowing;
-    console.log(isShowing);
   }}
 />
 <main>

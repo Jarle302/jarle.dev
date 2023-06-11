@@ -1,50 +1,63 @@
 <script>
-  export let isShowing = true
+  export let isShowing = true;
 </script>
 
 <header>
   <nav>
     <a class="logo--link" href="#hero">Jarle.dev</a>
-    <ul class={!isShowing?"show":"hide"} >
+    <ul class={!isShowing ? "show" : "hide"}>
       <li><a href="#hero">Home</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#about">About</a></li>
     </ul>
-    <button on:click type="button" class="hamburger--open"><svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0.329681 2.05885V0.588257H13.627V2.05885H0.329681ZM0.329681 5.73532H13.627V4.26473H0.329681V5.73532ZM0.329681 9.41179H13.627V7.9412H0.329681V9.41179Z" fill="#1C1B1F"/>
-</svg>
-</button>
+    <button on:click type="button" class="hamburger--open"
+      ><svg
+        width="14"
+        height="10"
+        viewBox="0 0 14 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M0.329681 2.05885V0.588257H13.627V2.05885H0.329681ZM0.329681 5.73532H13.627V4.26473H0.329681V5.73532ZM0.329681 9.41179H13.627V7.9412H0.329681V9.41179Z"
+          fill="#1C1B1F"
+        />
+      </svg>
+    </button>
   </nav>
 </header>
 
 <style>
-  .hamburger--open{display:none;}
+  .hamburger--open {
+    display: none;
+  }
 
-*{
-  font-family: "Source Code Pro", monospace;
-}
+  * {
+    font-family: "Source Code Pro", monospace;
+  }
 
-header{
-  position:fixed;
-  width:100%;
+  header {
+    position: fixed;
+    width: 100%;
+  }
 
-}
-
-button{border:none;
-background:none;
-margin-right:10px;
-position:absolute;
-right:0;
-z-index:3;
-}
+  button {
+    border: none;
+    background: none;
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+    z-index: 3;
+  }
 
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1px;
-
   }
 
   .logo--link {
@@ -56,17 +69,17 @@ z-index:3;
     font-size: 1.2rem;
   }
 
-  .show{
+  .show {
     display: flex;
-   
   }
 
-  .hide{
-    display:none;
+  .hide {
+    display: none;
   }
 
   ul {
-    display:flex;
+    display: none;
+    display: none;
     list-style: none;
     gap: 20px;
     justify-content: flex-end;
@@ -77,43 +90,43 @@ z-index:3;
 
   a {
     text-decoration: none;
-    color:#273549;
+    color: #273549;
   }
 
-  a:hover{
-    background-color:white;
+  a:hover {
+    background-color: white;
   }
   header {
     background-color: #e5d75c;
-    
   }
 
+  @media (max-width: 400px) {
+    .hamburger--open {
+      display: block;
+    }
+    ul {
+      position: absolute;
+      flex-direction: column;
+      top: 6%;
+      background: #9cccf9;
+      height: 50vh;
+      align-items: center;
+      justify-content: center;
+      z-index: 0;
+      width: 88vw;
+    }
 
-  @media (max-width: 400px){
-    .hamburger--open{display:block;}
-ul{
-  display:none
-}
+    header {
+      height: 42px;
+      display: grid;
+      padding: 5px;
+    }
 
-header{
-  height:42px;
-    display:grid;
-    padding:5px;
-}
-
-.show{
-  display: flex;
-    position: absolute;
-    flex-direction: column;
-    top: 6%;
-    background: #9cccf9;
-    height: 50vh;
-    align-items: center;
-    justify-content: center;
-    z-index: 0;
-    width: 88vw;
-
-  }
-
+    .show {
+      display: none;
+    }
+    .hide {
+      display: flex;
+    }
   }
 </style>
