@@ -9,14 +9,18 @@
 
 <header>
   <nav>
-    <a on:click={close} class="logo--link" href="#hero">Jarle.dev</a>
+    <a class="logo--link" href="#hero">Jarle.dev</a>
     <ul class={!isShowing ? "show" : "hide"}>
       <li><a on:click={close} href="#hero">Home</a></li>
       <li><a on:click={close} href="#projects">Projects</a></li>
       <li><a on:click={close} href="#contact">Contact</a></li>
       <li><a on:click={close} href="#about">About</a></li>
     </ul>
-    <button on:click type="button" class="hamburger--open"
+    <button
+      on:click
+      type="button"
+      class="hamburger--open"
+      aria-label="hamburger menu button"
       ><svg
         width="14"
         height="10"
@@ -96,10 +100,12 @@
   a {
     text-decoration: none;
     color: #273549;
+    transition: border-radius 100ms ease-in-out;
   }
 
   a:hover {
     background-color: white;
+    border-radius: 12px;
   }
   header {
     background-color: #e5d75c;

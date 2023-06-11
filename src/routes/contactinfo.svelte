@@ -9,11 +9,16 @@
 </div>
 
 <style>
+  i {
+    margin: 0 10px;
+  }
   p {
     font-size: 1.7rem;
   }
 
-  @media screen and (max-width:500px){
-    p{font-size:1rem;}
+  @media screen and (max-width: 500px) {
+    p {
+      font-size: 1rem;
+    }
   }
 </style>

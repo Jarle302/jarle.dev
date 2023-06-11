@@ -1,12 +1,30 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
+  let form = { email: "", message: "" };
+
+  function passForm() {
+    dispatch("formSubmit", form);
+  }
 </script>
 
 <form action="">
-  <label for="email">Email</label>
-  <input type="text" name="email" id="email" />
-  <label for="message">Message</label>
-  <textarea name="message" id="message" cols="30" rows="10" />
-  <button>Send</button>
+  <label for="your-email">your-email</label>
+  <input
+    bind:value={form.email}
+    type="email"
+    name="your-email"
+    id="your-email"
+  />
+  <label for="your-message">your-message</label>
+  <textarea
+    bind:value={form.message}
+    name="your-message"
+    id="your-message"
+    cols="30"
+    rows="10"
+  />
+  <button on:click={passForm}>Send</button>
 </form>
 
 <style>

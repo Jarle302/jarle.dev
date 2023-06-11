@@ -12,6 +12,30 @@
       isShowing = false;
     }
   }
+
+  function handleForm(e) {
+    let formData = new FormData();
+    formData.append("your-email", e.detail.email);
+    formData.append("your-message", e.detail.message);
+    console.log(e.detail);
+
+    fetch(
+      `https://jarletollaksen.com/wp-json/contact-form-7/v1/contact-forms/163/feedback`,
+      {
+        method: "POST",
+        headers: {
+          Authorization:
+            "Basic " +
+            btoa(`jarlehtollaksen2@live.no:ucDh SmYW mQRt HCIW WtpO tYCd`),
+        },
+        body: formData,
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  }
 </script>
 
 <svelte:window on:resize={resize} />
@@ -52,6 +76,7 @@
         projectDesc="This is my year one exam project on Noroff. The brief said to make a blog using wordpress as a headless cms."
         title="The Synthethic Scribe"
         imgURL="aboutAi.jpg"
+        imgAlt="Screenshot of a blog webpage"
       />
       <Card
         siteUrl="https://lively-sawine-3262d2.netlify.app/"
@@ -60,6 +85,7 @@
         projectDesc="This was my crosscourse assignment, the brief said to make a ecommerce site selling jackets for a fictional brand called RainyDays"
         title="Rainydays"
         imgURL="rainyDaysss.jpg"
+        imgAlt="Screenshot of a ecommerce webpage"
       />
       <Card
         siteUrl="https://sweet-gumption-216664.netlify.app/index.html?fbclid=IwAR1uBTurQsIklQe4oCAFu5WtCqP1l4Ugj0rkib2UK-vXZXeppgIAy6gTeU0"
@@ -68,19 +94,20 @@
         projectDesc="This was my semester project, that task was to make a website for a childrens science museum"
         title="CSM"
         imgURL="CSM.jpg"
+        imgAlt="Screenshot of a the community science museum webpage"
       />
     </CardList>
   </section>
   <section id="contact" class="contact--section">
     <h2 class="h2--contact">Contact me</h2>
     <ContactInfo />
-    <Form />
+    <Form on:formSubmit={handleForm} />
   </section>
   <section id="about" class="about--section">
     <h2 class="about--h2">About</h2>
     <div>
       <p class="about--p">
-        "I'm a former teacher who transitioned into a <strong
+        I'm a former teacher who transitioned into a <strong
           >front-end developer</strong
         >
         role. My journey into coding began when I needed to learn it in order to
@@ -107,7 +134,7 @@
         develop solutions that make a difference for others. Coding has become
         my way of making a
         <strong>meaningful impact</strong> in the world, and I'm thrilled to continue
-        this journey of growth and contribution."
+        this journey of growth and contribution.
       </p>
     </div>
     <img src="portrait.jpg" alt="" />
@@ -116,10 +143,6 @@
 <footer />
 
 <style>
-  .button--container {
-    display: flex;
-  }
-
   .p--bigger {
     font-size: 1.2rem;
   }
@@ -127,6 +150,7 @@
   .text--container {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .hero--section {
@@ -159,7 +183,6 @@
     color: white;
     padding-bottom: 60px;
   }
-  .center,
   .h2--contact {
     text-align: center;
   }
@@ -176,36 +199,12 @@
     margin: 20px 0;
   }
 
-  .svg--arrow {
-    width: 25%;
-    transform: translateY(-47%);
-    flex-basis: 100%;
-  }
-
   img {
     height: 203px;
     object-fit: cover;
     border-radius: 21px;
     border: 3px solid black;
     margin: 10px;
-  }
-
-  .img--card {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 21px;
-    border: 3px solid black;
-    margin: 10px;
-  }
-
-  .small--text {
-    color: #e2e55c;
-    font-size: 1rem;
-  }
-  .hero--name {
-    color: #e2e55c;
-    font-size: 2.2rem;
   }
 
   h1 {
